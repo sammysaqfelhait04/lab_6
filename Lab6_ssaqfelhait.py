@@ -4,15 +4,17 @@ sammy Saqfelhait
 This program   for login system using a dictionary to store usernames and passwords. 
 It  will checks if the username exists and allows the user up to three password attempts before locking the account.
 Date: 02/20/2026"""
+
 from typing import Dict
+
 
 def main() -> None:
     users: Dict[str, str] = {
-        "sam": "sam123",
-        "joe": "pass123",
-        "adam": "Passw0rd1",
-        "sara": "sara54321",}
-    username: str = input("Enter username")
+        "gwalters": "S3curePass!",
+        "admin": "Admin123",
+        "jsmith": "Password1",
+        "guest": "guest"}
+    username: str = input("Enter username: ")
 
     if username not in users:
         print("\nUser not found. Exiting.")
@@ -38,5 +40,7 @@ def main() -> None:
                 print("Access Denied. Try again.")
             else:
                 print("\nToo many failed attempts. Account locked.")
+
+
 if __name__ == "__main__":
     main()
